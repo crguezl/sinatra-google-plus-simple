@@ -44,7 +44,8 @@ end
 # Display Google+ details
 get '/' do
   @key = settings.key
-  @gplus = GPlus.new(@key, '117566254824665007664')
+  @user = settings.user
+  @gplus = GPlus.new(@key, @user)
   erb :show
 end
 
