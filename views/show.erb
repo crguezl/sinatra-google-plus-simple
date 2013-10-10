@@ -1,0 +1,27 @@
+<div>
+  <h1>A Sinatra app to access Google+</h1>
+  <h3>Get Google+ Info</h3>
+
+  <p>This Google+ ID belongs to <%= @gplus.row0 %></p>
+  <p>
+  <table id="hor-minimalist-a" summary="Google+ details">
+      <tr>
+        <thead>
+          <img src='<%=@gplus.logo%>'>
+        </thead>
+      </tr>
+    <tbody>
+      <% @gplus.row1.each do |x| %>
+        <tr>
+            <td><%= x.title %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </p>
+
+  <p><a href="/">Back</a></p>
+</div>
+<div id="footer">
+  <p><b>A Fun Sinatra App for Google+ by RubyLearning 20 Sept. 2011</b>.</p>
+</div>
