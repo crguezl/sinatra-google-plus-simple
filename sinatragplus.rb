@@ -22,7 +22,6 @@ class GPlus
   private
     #Get info about specific G+ ID
     def get_info
-      GooglePlus.api_key = 'AIzaSyC5FFIdxj8ZoBHf3KnUU8clfWBmASc0ZOA'
       begin
         GooglePlus.api_key = @apikey
         person = GooglePlus::Person.get(@gid.to_i)
